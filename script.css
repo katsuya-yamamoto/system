@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(201, 242, 243);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+button {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: rgb(105, 104, 103);
+    color: white;
+}
+
+input.target {
+    height: 50px;
+    font-size: 40px;
+}
+
+#first {
+    color: beige;
+}
+
+li {
+    font-size: 30px;
+}
+
