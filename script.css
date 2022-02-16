@@ -1,17 +1,38 @@
 body {
     background-color: rgb(201, 242, 243);
-}
+    background-size: cover;
+    background-image: url(pc.jpeg);
+
+}   
 
 h1 {
-    font-size: 50px;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
+    text-shadow:1px 1px 0 rgb(27, 18, 18), -1px -1px 0 rgb(61, 40, 40),
+            -1px 1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(24, 19, 19),
+            0px 1px 0 rgb(31, 26, 26),  0-1px 0 rgb(14, 11, 11),
+            -1px 0 0 rgb(27, 16, 16), 1px 0 0 rgb(15, 13, 13);
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
+    text-shadow:1px 1px 0 rgb(27, 18, 18), -1px -1px 0 rgb(61, 40, 40),
+            -1px 1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(24, 19, 19),
+            0px 1px 0 rgb(31, 26, 26),  0-1px 0 rgb(14, 11, 11),
+            -1px 0 0 rgb(27, 16, 16), 1px 0 0 rgb(15, 13, 13);
 }
 
 h3 {
     font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
+    text-shadow:1px 1px 0 rgb(27, 18, 18), -1px -1px 0 rgb(61, 40, 40),
+            -1px 1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(24, 19, 19),
+            0px 1px 0 rgb(31, 26, 26),  0-1px 0 rgb(14, 11, 11),
+            -1px 0 0 rgb(27, 16, 16), 1px 0 0 rgb(15, 13, 13);
 }
 
 button {
@@ -24,13 +45,25 @@ button {
 input.target {
     height: 50px;
     font-size: 40px;
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
 }
 
 #first {
-    color: beige;
+    color: rgb(53, 53, 52);
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
 }
 
 li {
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
+    font-family: 'HG丸ｺﾞｼｯｸM-PRO', cursive;
 }
 
+a {
+    color: white;
+    font-size: 40px;
+    text-shadow:1px 1px 0 rgb(27, 18, 18), -1px -1px 0 rgb(61, 40, 40),
+            -1px 1px 0 rgb(8, 8, 8), 1px -1px 0 rgb(24, 19, 19),
+            0px 1px 0 rgb(31, 26, 26),  0-1px 0 rgb(14, 11, 11),
+            -1px 0 0 rgb(27, 16, 16), 1px 0 0 rgb(15, 13, 13);
+}
