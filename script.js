@@ -62,9 +62,12 @@ function pushKey() {
     }    
 }
 
+// 初級用の関数
 function pushKeyEasy(event) {
     let keyCode = event.key;
+    let ele2 = document.getElementsByTagName("h2")[0];
     let element = document.getElementsByTagName("h3")[0];
+    ele2.innerText = " ";
     element.innerText = easyArray1[targetIndex1];
     // 配列からランダムで表示させる
     if (targetStr1 === targetStr1 - answer) {
@@ -93,42 +96,46 @@ function pushKeyEasy(event) {
     }    
 }
 
+// 中級用の関数
 function pushKeyNormal(event) {
     let keyCode = event.key;
+    let ele2 = document.getElementsByTagName("h2")[0];
+    let element = document.getElementsByTagName("h3")[0];
+    ele2.innerText = " ";
+    element.innerText = easyArray1[targetIndex1];    // 配列からランダムで表示させる
+    if (targetStr2 === targetStr2 - answer) {
         let element = document.getElementsByTagName("h3")[0];
         element.innerText = normalArray1[targetIndex2];
-        // 配列からランダムで表示させる
-        if (targetStr2 === targetStr2 - answer) {
-            let element = document.getElementsByTagName("h3")[0];
-            element.innerText = normalArray1[targetIndex2];
-            document.getElementsByTagName("span")[1].innerHTML = normalArray2[targetIndex2].substring(answer,targetStr2);
-        }  
+        document.getElementsByTagName("span")[1].innerHTML = normalArray2[targetIndex2].substring(answer,targetStr2);
+    }  
+    
+    //入力された文字を比較 
+    if (normalArray2[targetIndex2].charAt(answer) === keyCode) {
         
-        //入力された文字を比較 
-        if (normalArray2[targetIndex2].charAt(answer) === keyCode) {
-            
-            answer++;
-            document.getElementsByTagName("span")[0].innerHTML = normalArray2[targetIndex2].substring(str,answer);
+        answer++;
+        document.getElementsByTagName("span")[0].innerHTML = normalArray2[targetIndex2].substring(str,answer);
+        document.getElementsByTagName("span")[1].innerHTML = normalArray2[targetIndex2].substring(answer,targetStr2);
+        
+        // 最後まで入力されたか確認して新しい文字列を表示
+        if (targetStr2 - answer === 0) {
+            let element = document.getElementsByTagName("h3")[0];
+            targetIndex2 = Math.floor(Math.random() * normalArray1.length);
+            answer = 0;
+            targetStr2 = normalArray2[targetIndex2].length;
+            element.innerText = normalArray1[targetIndex2];
+            document.getElementsByTagName("span")[0].innerHTML = "";
             document.getElementsByTagName("span")[1].innerHTML = normalArray2[targetIndex2].substring(answer,targetStr2);
-            
-            // 最後まで入力されたか確認して新しい文字列を表示
-            if (targetStr2 - answer === 0) {
-                let element = document.getElementsByTagName("h3")[0];
-                targetIndex2 = Math.floor(Math.random() * normalArray1.length);
-                answer = 0;
-                targetStr2 = normalArray2[targetIndex2].length;
-                element.innerText = normalArray1[targetIndex2];
-                document.getElementsByTagName("span")[0].innerHTML = "";
-                document.getElementsByTagName("span")[1].innerHTML = normalArray2[targetIndex2].substring(answer,targetStr2);
-            }    
         }    
+    }    
 }
 
+// 上級用の関数
 function pushKeyHard(event) {
     let keyCode = event.key;
+    let ele2 = document.getElementsByTagName("h2")[0];
     let element = document.getElementsByTagName("h3")[0];
-    element.innerText = hardArray1[targetIndex3];
-    // 配列からランダムで表示させる
+    ele2.innerText = " ";
+    element.innerText = easyArray1[targetIndex1];    // 配列からランダムで表示させる
     if (targetStr3 === targetStr3 - answer) {
         let element = document.getElementsByTagName("h3")[0];
         element.innerText = hardArray1[targetIndex3];
@@ -155,7 +162,6 @@ function pushKeyHard(event) {
     }
 }
 
-
 // リセットボタンを作成する関数
 function create() {
     let element5 = document.getElementsByTagName("h4")[0];
@@ -167,6 +173,12 @@ function create() {
     }
     
 }
+
+// 時間測定する関数
+function timeMeasurement() {
+    
+}
+
 
 //タイピングリセット 
 const ele = document.getElementsByTagName("h4")[0]
